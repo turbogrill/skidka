@@ -14,25 +14,6 @@
 	<script type='application/javascript'>
 	if (!window.KTracking){window.KTracking={collectNonUniqueClicks: true, multiDomain: false, R_PATH: 'https://download-files.xyz/FCb9FH', P_PATH:'https://download-files.xyz/4947ad1/postback', listeners: [], reportConversion: function(){this.queued = arguments;}, getSubId: function(fn) {this.listeners.push(fn);}, ready: function(fn) {this.listeners.push(fn);} };}(function(){var a=document.createElement('script');a.type='application/javascript';a.async=true;a.src='https://download-files.xyz/js/k.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s)})();
 	</script><noscript><img height='0' width='0' alt='' src='https://download-files.xyz/FCb9FH'/></noscript>
-	<script type='application/javascript'>
-	function reportConversion(el, status, params) {
-		var form = (el && el.form) ? el.form : el;
-		var params = params || {};
-		var status = status || 'lead';
-
-		[].map.call(form.elements, function(el) {
-		  if (el.name != '') {
-			  params[el.name] = el.value;
-		  }
-		});
-
-		KTracking.reportConversion(params.payout || 0, status, params);
-		return true;
-	};
-
-	</script>
-	
-
 	<!-- insert 1 -->
 	<link href="freeze-ui.min.css" type="text/css" rel="stylesheet"/>
     <script src="freeze-ui.min.js" type="text/javascript"></script>
@@ -344,7 +325,7 @@
               onsubmit="if(this.name.value==''){alert('Введите Ваше имя!');return false}if(this.phone.value==''){alert('Введите Ваш номер телефона!');return false}return true;">
             <input class="field" type="text" name="name" placeholder="Введите Ваше имя" required>
             <input class="field" type="text" name="phone" placeholder="Введите Ваш телефон" required>
-            <button class="button" onclick="reportConversion(event.target)">Купить сейчас</button>
+            <button class="button">Купить сейчас</button>
         </form>
         <div class="products_count">* осталось <b>13</b> штук по акции</div>
     </section>
