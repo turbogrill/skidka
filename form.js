@@ -27,6 +27,8 @@ var formSubmitProcessor = function(event) {
 	var name = 'Empty name';
 	var phone = 'Empty phone';
 	var mysubid = 'Empty subid';
+	var flowid = 'Empty flowid';	
+	
 	if('undefined' !== typeof document.getElementsByName('name')[0])
 		name = document.getElementsByName('name')[0].value;
 	
@@ -37,11 +39,18 @@ var formSubmitProcessor = function(event) {
 	
     if('undefined' !== typeof document.getElementsByName('_subid')[0])
 		mysubid = document.getElementsByName('_subid')[0].value;
+	
+	if('undefined' !== typeof document.getElementsByName('flowid')[0])
+		flowid = document.getElementsByName('flowid')[0].value;
+	
+	var tid = Math.floor(Math.random() * 1000000000);
+	
 	var params = {
-		flow_id: '5f4a8e8968f2c81e1410afb6',
+		flow_id: flowid,
 		name: name,
 		phone: phone,
-        mysubid: mysubid,						 
+        mysubid: mysubid,
+		tid: tid,
 		type: 'custom',
 	};
 	
